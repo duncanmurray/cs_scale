@@ -2,3 +2,74 @@ cs_scale
 =========
 
 Create Rackspace cloud servers on the fly
+
+```
+usage: cs_scale.py [-h] [-p SERVER_NAME_PREFIX] [-r REGION] -i SERVER_IMAGE_ID
+                   [-s SERVER_RAM_SIZE] [-m METADATA_DICTIONARY]
+                   [-c SERVER_COUNT] [-l DIRECTORY] [-v]
+
+A Rackspace Cloud Server provisioning application that is able to spin up a given number of servers from an image and add some metadat
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p SERVER_NAME_PREFIX, --prefix SERVER_NAME_PREFIX
+                        Server name prefix (defaults to 'node-' e.g. node-1,
+                        node-2, ...)
+  -r REGION, --region REGION
+                        Region where servers should be built (defaults to
+                        'LON'
+  -i SERVER_IMAGE_ID, --image SERVER_IMAGE_ID
+                        Image ID to be used in server build There is no
+                        default, ID must be supplied
+  -s SERVER_RAM_SIZE, --size SERVER_RAM_SIZE
+                        Server RAM size in megabytes (defaults to '512')
+  -m METADATA_DICTIONARY, --meta METADATA_DICTIONARY
+                        Metadata to be used in the build request(s) - (must be
+                        in the format: {"key": "value", "key": "value", ...})
+                        Maximum of 5 key/value pairs, default: {'MyGroup0': 'lsyncd'}
+  -c SERVER_COUNT, --count SERVER_COUNT
+                        Number of servers to build (defaults to '1')
+  -l DIRECTORY, --logpath DIRECTORY
+                        The directory to create log files in
+  -v, --verbose         Turn on debug verbosity
+```
+
+####PREREQUISITS
+
+1. Rackspace Cloud server image created
+
+####INSTALLATION
+
+1. `git clone git@github.com:duncanmurray/cs_scale.git && cp cs_scale/cs_scale.py /usr/local/sbin/cs_scale.py`
+2. `pip install pyrax`
+
+####OPTIONS EXPLANATION
+
+All options are optional except for -i, --image which must be supplied to build your servers from.
+
+######-h, --help            
+Show a help message
+
+######-p SERVER_NAME_PREFIX, --prefix SERVER_NAME_PREFIX
+Prefix to build servers with. The default is to use `node-` e.g. node-1, node-2.
+
+######-r REGION, --region REGION
+Region where servers should be built The default is `LON`.
+
+######-i SERVER_IMAGE_ID, --image SERVER_IMAGE_ID
+Image ID to be used in server build There is no default, ID must be supplied. For example `a3a2c42f-575f-4381-9c6d-fcd3b7d07d17`.
+
+######-s SERVER_RAM_SIZE, --size SERVER_RAM_SIZE
+RAM size to build servers with in megabytes. The default is `512`
+
+######-m METADATA_DICTIONARY, --meta METADATA_DICTIONARY
+Metadata to be used in the build request(s). This must be in the format: `{"key": "value", "key": "value", ...}` Maximum of 5 key/value pairs. The default is: `{'MyGroup0': 'lsyncd'}`
+
+######-c SERVER_COUNT, --count SERVER_COUNT
+Number of servers to build. The default is '1')
+
+######-l DIRECTORY, --logpath DIRECTORY
+The directory to create log files in. The default is `/var/log`
+
+######-v, --verbose         
+Turn on `DEBUG` logging level. The default is `WARNING`
