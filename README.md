@@ -1,14 +1,13 @@
 cs_scale
 =========
 
-Create Rackspace cloud servers on the fly
+A Rackspace Cloud Server provisioning application that is able to spin up a given number of servers from an image and add some metadata.
+
 
 ```
 usage: cs_scale.py [-h] [-p SERVER_NAME_PREFIX] [-r REGION] -i SERVER_IMAGE_ID
                    [-s SERVER_RAM_SIZE] [-m METADATA_DICTIONARY]
                    [-c SERVER_COUNT] [-l DIRECTORY] [-v]
-
-A Rackspace Cloud Server provisioning application that is able to spin up a given number of servers from an image and add some metadat
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -50,25 +49,25 @@ All options are optional except for -i, --image which must be supplied to build 
 ######-h, --help            
 Show a help message
 
-######-p SERVER_NAME_PREFIX, --prefix SERVER_NAME_PREFIX
+######-p <prefix>, --prefix <prefix>
 Prefix to build servers with. The default is to use `node-` e.g. node-1, node-2.
 
-######-r REGION, --region REGION
+######-r <region>, --region <region>
 Region where servers should be built The default is `LON`.
 
-######-i SERVER_IMAGE_ID, --image SERVER_IMAGE_ID
+######-i <image_id>, --image <image_id>
 Image ID to be used in server build There is no default, ID must be supplied. For example `a3a2c42f-575f-4381-9c6d-fcd3b7d07d17`.
 
-######-s SERVER_RAM_SIZE, --size SERVER_RAM_SIZE
+######-s <ram_size>, --size <ram_size>
 RAM size to build servers with in megabytes. The default is `512`
 
-######-m METADATA_DICTIONARY, --meta METADATA_DICTIONARY
+######-m <dictionary>, --meta <dict>ionary
 Metadata to be used in the build request(s). This must be in the format: `{"key": "value", "key": "value", ...}` Maximum of 5 key/value pairs. The default is: `{'MyGroup0': 'lsyncd'}`
 
-######-c SERVER_COUNT, --count SERVER_COUNT
+######-c <integer>, --count <integer>
 Number of servers to build. The default is '1')
 
-######-l DIRECTORY, --logpath DIRECTORY
+######-l <directory>, --logpath <directory>
 The directory to create log files in. The default is `/var/log`
 
 ######-v, --verbose         
