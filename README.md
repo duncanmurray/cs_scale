@@ -39,8 +39,16 @@ optional arguments:
 
 ####INSTALLATION
 
-1. `git clone git@github.com:duncanmurray/cs_scale.git && cp cs_scale/cs_scale.py /usr/local/sbin/cs_scale.py`
-2. `pip install pyrax`
+1. Download cs_scale.py
+```
+git clone git@github.com:duncanmurray/cs_scale.git \
+&& cp cs_scale/cs_scale.py /usr/local/sbin/cs_scale.py
+```
+
+2. Download and install pyrax
+```
+pip install pyrax
+```
 
 ####OPTIONS EXPLANATION
 
