@@ -156,7 +156,7 @@ def main():
     # The server create request requires the ID rather than RAM amount.
     flavor = [f for f in cs.flavors.list() if args.size == f.ram][0]
 
-    rootLogger.warning("Cloud Server build request initiated")
+    rootLogger.warning("Cloud Server build request initiated. Consider using --verbose. Please wait ...")
 
     # Print the image ID and name selected, as well as server count
     rootLogger.info("Image details, ID: '%s' Name: '%s'" % (image.id, image.name))
