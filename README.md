@@ -42,7 +42,7 @@ optional arguments:
 
 1. Download cs_scale.py
 ```
-git clone git@github.com:duncanmurray/cs_scale.git \
+git clone https://github.com/duncanmurray/cs_scale.git \
 && cp cs_scale/cs_scale.py /usr/local/sbin/cs_scale.py
 ```
 
