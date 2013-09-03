@@ -58,8 +58,9 @@ def main():
                                                   "application"))
     parser.add_argument("-p", "--prefix", action="store", required=False,
                         metavar="SERVER_NAME_PREFIX", type=str,
-                        help=("Server name prefix (defaults to 'node-' "
-                              "e.g. node-1, node-2, ...)"),
+                        help=("Server name prefix (defaults to 'node-' +"
+                              " a random 8 charachter string"
+                              "e.g. node-54jg84d9, node-57fhd49h, ...)"),
                         default="node-")
     parser.add_argument("-r", "--region", action="store", required=False,
                         metavar="REGION", type=str,
@@ -169,7 +170,7 @@ def main():
     count = 1
     while count <= args.count:
         # Issue the server creation request
-        srv = cs.servers.create(args.prefix + str(count), image.id,
+        srv = cs.servers.create(args.prefix + pyrax.utils.random_name(8, ascii_only=True), image.id,
                                 flavor.id, meta=args.meta)
         # Add server ID from the create request to the tracking list
         servers.append(srv)

@@ -12,8 +12,9 @@ usage: cs_scale.py [-h] [-p SERVER_NAME_PREFIX] [-r REGION] -i SERVER_IMAGE_ID
 optional arguments:
   -h, --help            show this help message and exit
   -p SERVER_NAME_PREFIX, --prefix SERVER_NAME_PREFIX
-                        Server name prefix (defaults to 'node-' e.g. node-1,
-                        node-2, ...)
+                        Server name prefix (defaults to 'node-' +
+                        a random 8 charachter string
+                        e.g. node-54jg84d9, node-57fhd49h, ...)
   -r REGION, --region REGION
                         Region where servers should be built (defaults to
                         'LON'
@@ -58,7 +59,7 @@ All options are optional except for -i, --image which must be supplied to build 
 Show a help message
 
 ######-p <prefix>, --prefix <prefix>
-Prefix to build servers with. The default is to use `node-` e.g. node-1, node-2.
+Prefix to build servers with. The default is to use `node- + random 8 charachter string` e.g. node-54jg84d9, node-57fhd49h
 
 ######-r <region>, --region <region>
 Region where servers should be built The default is `LON`.
