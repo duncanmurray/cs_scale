@@ -21,7 +21,7 @@ import os
 from sys import exit
 from time import sleep
 import logging
-
+import json
 import pyrax
 from pyrax import exceptions as e
 pyrax.set_setting("identity_type", "rackspace")
@@ -76,7 +76,7 @@ def main():
                         help=("Server RAM size in megabytes (defaults to "
                               "'512')"), choices=FLAVOR_LIST, default=512)
     parser.add_argument("-m", "--meta", action="store", required=False,
-                        metavar="METADATA_DICTIONARY", type=str,
+                        metavar="METADATA_DICTIONARY", type=json.loads,
                         help=("Metadata to be used in the build request(s) - "
                               '(must be in the format: {"key": "value"'
                               ', "key": "value", ...}) Maximum of 5 '
