@@ -7,7 +7,7 @@ A Rackspace Cloud Server provisioning application that is able to spin up a give
 ```
 usage: cs_scale.py [-h] [-p SERVER_NAME_PREFIX] [-r REGION] -i SERVER_IMAGE_ID
                    [-s SERVER_RAM_SIZE] [-m METADATA_DICTIONARY]
-                   [-c SERVER_COUNT] [-l DIRECTORY] [-v]
+                   [-c SERVER_COUNT] [-l LOG_DIRECTORY] [-v]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -29,7 +29,7 @@ optional arguments:
                         Maximum of 5 key/value pairs, default: {'MyGroup0': 'lsyncd'}
   -c SERVER_COUNT, --count SERVER_COUNT
                         Number of servers to build (defaults to '1')
-  -l DIRECTORY, --logpath DIRECTORY
+  -l LOG_DIRECTORY, --logpath LOG_DIRECTORY
                         The directory to create log files in
   -v, --verbose         Turn on debug verbosity
 ```
@@ -76,7 +76,7 @@ Metadata to be used in the build request(s). This must be in the format: `{"key"
 ######-c <integer>, --count <integer>
 Number of servers to build. The default is '1')
 
-######-l <directory>, --logpath <directory>
+######-l <log_directory>, --logpath <log_directory>
 The directory to create log files in. The default is `/var/log`
 
 ######-v, --verbose         

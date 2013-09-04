@@ -88,7 +88,7 @@ def main():
                               "'%d')" % (SERVER_COUNT)), choices=range(1,51),
                         default=SERVER_COUNT)
     parser.add_argument("-l", "--logpath", action="store", required=False,
-                        metavar="DIRECTORY", type=str,
+                        metavar="LOG_DIRECTORY", type=str,
                         help=("The directory to create log files in"),
                         default=LOGPATH)
     parser.add_argument("-v", "--verbose", action="store_true", required=False,
