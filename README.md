@@ -70,7 +70,7 @@ Image ID to be used in server build There is no default, ID must be supplied. Fo
 ######-s <ram_size>, --size <ram_size>
 RAM size to build servers with in megabytes. The default is `512`
 
-######-m <dictionary>, --meta <dict>ionary
+######-m <dictionary>, --meta <dict>
 Metadata to be used in the build request(s). This must be in the format: `{"key": "value", "key": "value", ...}` Maximum of 5 key/value pairs. The default is: `{'MyGroup0': 'lsyncd'}`
 
 ######-c <integer>, --count <integer>
