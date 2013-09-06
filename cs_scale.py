@@ -65,7 +65,7 @@ def main():
     parser.add_argument("-r", "--region", action="store", required=False,
                         metavar="REGION", type=str,
                         help=("Region where servers should be built (defaults"
-                              " to 'LON'"), choices=["ORD", "DFW", "LON"],
+                              " to 'LON'"), choices=["ORD", "DFW", "LON", "SYD", "IAD"],
                         default="LON")
     parser.add_argument("-i", "--image", action="store", required=True,
                         metavar="SERVER_IMAGE_ID", type=str,
