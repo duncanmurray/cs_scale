@@ -30,7 +30,7 @@ pyrax.set_setting("identity_type", "rackspace")
 CONFIG_FILE = "~/.rackspace_cloud_credentials"
 
 # Metadata specifying key/value pair to create server with
-METADATA = {"MyGroup0": "lsyncd"}
+METADATA = {"MyGroup0_lsyncd": "lsyncd_slave"}
 
 # Default number of servers to build
 SERVER_COUNT = 1

@@ -26,7 +26,7 @@ optional arguments:
   -m METADATA_DICTIONARY, --meta METADATA_DICTIONARY
                         Metadata to be used in the build request(s) - (must be
                         in the format: {"key": "value", "key": "value", ...})
-                        Maximum of 5 key/value pairs, default: {'MyGroup0': 'lsyncd'}
+                        Maximum of 5 key/value pairs, default: {'MyGroup0_lsyncd': 'lsyncd_slave'}
   -c SERVER_COUNT, --count SERVER_COUNT
                         Number of servers to build (defaults to '1')
   -l LOG_DIRECTORY, --logpath LOG_DIRECTORY
@@ -71,7 +71,7 @@ Image ID to be used in server build There is no default, ID must be supplied. Fo
 RAM size to build servers with in megabytes. The default is `512`
 
 ######-m <dictionary>, --meta <dict>
-Metadata to be used in the build request(s). This must be in the format: `{"key": "value", "key": "value", ...}` Maximum of 5 key/value pairs. The default is: `{'MyGroup0': 'lsyncd'}`
+Metadata to be used in the build request(s). This must be in the format: `{"key": "value", "key": "value", ...}` Maximum of 5 key/value pairs. The default is: `{'MyGroup0_lsyncd': 'lsyncd_slave'}`
 
 ######-c <integer>, --count <integer>
 Number of servers to build. The default is '1')
